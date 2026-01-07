@@ -16,13 +16,13 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 print("\n========== EMOTION PREDICTION ==========")
 
 # -------- Load emotion datasets (EXACT columns) --------
-df_e1 = pd.read_csv("emotion_data_1.csv")[['text', 'label']]
+df_e1 = pd.read_csv("./data/emotion_data_1.csv")[['text', 'label']]
 df_e1.rename(columns={'label': 'Emotion'}, inplace=True)
 
-df_e2 = pd.read_csv("emotion_data_2.csv")[['Sentence', 'Label']]
+df_e2 = pd.read_csv("./data/emotion_data_2.csv")[['Sentence', 'Label']]
 df_e2.rename(columns={'Sentence': 'text', 'Label': 'Emotion'}, inplace=True)
 
-df_e3 = pd.read_csv("emotion_data_3.csv")[['Text', 'Emotion']]
+df_e3 = pd.read_csv("./data/emotion_data_3.csv")[['Text', 'Emotion']]
 df_e3.rename(columns={'Text': 'text'}, inplace=True)
 
 # Merge
@@ -127,7 +127,7 @@ print("✅ Emotion model saved")
 print("\n========== DEPRESSION DETECTION ==========")
 
 # -------- Load cleaned depression dataset --------
-dep_df = pd.read_csv("final_depression_dataset.csv")
+dep_df = pd.read_csv("./data/final_depression_dataset.csv")
 
 print("Depression dataset shape:", dep_df.shape)
 print("Label distribution:\n", dep_df['label'].value_counts())
