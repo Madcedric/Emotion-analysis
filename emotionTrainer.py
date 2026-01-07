@@ -55,6 +55,7 @@ sns.countplot(
 plt.title("Emotion Distribution")
 plt.xticks(rotation=45)
 plt.tight_layout()
+plt.savefig('Emotion Distribution.png', dpi=300 ,bbox_inches='tight')
 plt.show()
 
 # -------- Encode labels --------
@@ -109,6 +110,7 @@ plt.title("Emotion Confusion Matrix")
 plt.xlabel("Predicted")
 plt.ylabel("Actual")
 plt.tight_layout()
+plt.savefig('confusion_matrix.png', dpi=300 ,bbox_inches='tight')
 plt.show()
 
 # -------- Save emotion model --------
@@ -170,6 +172,7 @@ plt.title("Depression Confusion Matrix")
 plt.xlabel("Predicted")
 plt.ylabel("Actual")
 plt.tight_layout()
+plt.savefig('depression_confusion_matrix.png', dpi=300 ,bbox_inches='tight')
 plt.show()
 
 # -------- Save depression model --------
